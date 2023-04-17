@@ -15,7 +15,7 @@ int data[] = { -1, -2, -5, -4, -4 };
 int main(){
 	const int point_continue = POINT_CONTINUE;
 	const int after_point_mask = AFTER_POINT_MASK;
-	const int decimal_digit_shift_after_point = DECIMAL_DIGIT_SHIFT_AFTER_POINT + 2;
+	const int decimal_digit_shift_after_point = DECIMAL_DIGIT_SHIFT_AFTER_POINT/10 + 1;
 
 	// I - set point
 	for (unsigned int index = 0; index < DATA_LEN; ++index) {
