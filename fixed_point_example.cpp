@@ -24,18 +24,18 @@ int main(){
 
 	// II - compute
 	int result = 0;
-	char signFlag[2] = { '\0', '\0'};
+	char signStr[2] = { '\0', '\0'};
 	for (unsigned int index = 0; index < DATA_LEN; ++index){
 		result += data[index];
 	}
 	if (result < 0) {
-		signFlag[0] = '-';
+		signStr[0] = '-';
 		result =- result;
 	}
 	result /= DATA_LEN;
 	
 	// III - output
-	printf("%s%d,%d\r\n", signFlag, result / point_continue, (result & after_point_mask) * decimal_digit_shift_after_point / point_continue);
+	printf("%s%d,%d\r\n", signStr, result / point_continue, (result & after_point_mask) * decimal_digit_shift_after_point / point_continue);
 
 	return 0;
 }
